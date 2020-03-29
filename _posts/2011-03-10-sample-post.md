@@ -2,7 +2,11 @@
 layout: post
 title: Sample Post
 excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-categories: [hello world]
+categories: [jekyll]
+tags: [jekyll]
+author: leo
+date:   2015-08-18 15:07:19
+modified: 2014-09-14
 comments: true
 image:
   feature: https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
@@ -40,6 +44,114 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 
+
+## Code Highlights
+
+
+### Pygments Code Blocks
+
+To modify styling and highlight colors edit `/_sass/_pygments.scss`.
+
+{% highlight css %}
+#container {
+    float: left;
+    margin: 0 -240px 0 0;
+    width: 100%;
+}
+{% endhighlight %}
+
+{% highlight html %}
+{% raw %}
+<nav class="pagination" role="navigation">
+    {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+    {% endif %}
+    {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+    {% endif %}
+</nav><!-- /.pagination -->
+{% endraw %}
+{% endhighlight %}
+
+{% highlight ruby %}
+module Jekyll
+  class TagIndex < Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'index.html'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.data['tag'] = tag
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Tagged: '
+      tag_title_suffix = site.config['tag_title_suffix'] || '&#8211;'
+      self.data['title'] = "#{tag_title_prefix}#{tag}"
+      self.data['description'] = "An archive of posts tagged #{tag}."
+    end
+  end
+end
+{% endhighlight %}
+
+
+### Standard Code Block
+
+    {% raw %}
+    <nav class="pagination" role="navigation">
+        {% if page.previous %}
+            <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+        {% endif %}
+        {% if page.next %}
+            <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+        {% endif %}
+    </nav><!-- /.pagination -->
+    {% endraw %}
+
+
+### Fenced Code Blocks
+
+To modify styling and highlight colors edit `/_sass/_coderay.scss`. Line numbers and a few other things can be modified in `_config.yml`. Consult [Jekyll's documentation](http://jekyllrb.com/docs/configuration/) for more information.
+
+~~~ css
+#container {
+    float: left;
+    margin: 0 -240px 0 0;
+    width: 100%;
+}
+~~~
+
+~~~ html
+{% raw %}<nav class="pagination" role="navigation">
+    {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+    {% endif %}
+    {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+    {% endif %}
+</nav><!-- /.pagination -->{% endraw %}
+~~~
+
+~~~ ruby
+module Jekyll
+  class TagIndex < Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'index.html'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.data['tag'] = tag
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Tagged: '
+      tag_title_suffix = site.config['tag_title_suffix'] || '&#8211;'
+      self.data['title'] = "#{tag_title_prefix}#{tag}"
+      self.data['description'] = "An archive of posts tagged #{tag}."
+    end
+  end
+end
+~~~
+
+
 ## List Types
 
 ### Ordered Lists
@@ -68,16 +180,6 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 |=====
 | Foot 1   | Foot 2   | Foot 3   |
 
-## Code Snippets
-
-{% highlight css %}
-#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
-}
-{% endhighlight %}
-
 ## Buttons
 
 Make any link standout more when applying the `.btn` class.
@@ -96,3 +198,13 @@ Make any link standout more when applying the `.btn` class.
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
+
+## Links
+
+Some [link](http://renyuanz.github.io) can also be shown.
+
+## Comments
+
+This is a sample post with a large feature image[^1] up top and tons of text. Odio ad blue bottle vinyl, 90's narwhal 
+
+[^1]: Texture image courtesty of [Lovetextures](http://www.lovetextures.com/)
