@@ -3,18 +3,18 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email:
-description: A simple and awesome blog theme powered by jekyll.
-url: # the base hostname & protocol for your site
-keywords: ["blog", "jekyll"]
+title: Love Steak
+email: lavelee15@gmail.com
+description: A dev blog
+url: https://lavelee.github.io/blog/
+keywords: ["blog", "developer"]
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Asia/Seoul
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -33,25 +33,25 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
-  avatar: leonids-logo.png
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
-  email:
-  disqus-shortname:
+  name: SungHyun Lee
+  avatar: me.jpeg
+  job: "Software Engineer"
+  bio: "주로 웹 프론트/백엔드를 개발합니다"
+  email: lavelee15@gmail.com
+  disqus-shortname: lavelee
   twitter: #username
   facebook: #username
   google:
     plus: #username
-    analytics:
+    analytics: UA-90005131-1
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: lavelee
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: sunghyun-lee-1654ba194
   skype: #username
   xing: #username
   instagram: #username

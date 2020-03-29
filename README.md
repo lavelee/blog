@@ -1,29 +1,3 @@
-# Update 07/09/2018
-
-I'm planning to refactor Leonids theme!!!
-
-The goal is really simple: make documentation more intuitive and deployment simpler!!!
-
-Here is the plan:
-
-| Version | Description | Date |
-| --- | --- | --- |
-| 1.1 | Jekyll version deployable with gem | 07/15/2018 |
-| 1.2 | New features: Pagination, Prev/Next post | 07/22/2018 |
-| 2.0 | Gatsby or Vuepress version (vote in Issues) | who knows... |
-
-As the project was and will be designed to improve your writing experience, only documentation, gem, deployment process with CI relevant PRs are acceptable in the future.
-
-I want you to know how much I value your support.
-
-Share it to your timeline!
-
-# Update 05/06/2016
-
-Important! It's better to download the gzipped files instead of forking the repo. I would really appreciate if you could give me a star. 😁
-
-This project is under MIT license, so feel free to make it your own.
-
 # Leonids Jekyll Themes
 
 **[Leonids](http://renyuanz.github.io/leonids)** is a clean Jekyll theme perfect for powering your GitHub hosted blog.
@@ -38,11 +12,11 @@ This project is under MIT license, so feel free to make it your own.
 
 See a [demo](http://renyuanz.github.io/leonids/) hosted on GitHub.
 
-## Quick setup
+## Quick setup (Mac os)
 
 ```
-git clone https://github.com/renyuanz/leonids
-cd leonids
+cd blog
+gem install --user-install bundler jekyll
 jekyll server
 ```
 
@@ -64,8 +38,3 @@ Leonids features a simple resume page. It is divided up into five sections:
 * About (Edit \_includes/sections/about.html)
 
 You can put all your info into these files, and they will be featured on the resume page.
-
-## TODO
-
-- [ ] Redesign categories page. Ref: [dribbble: blog category section By Ilja Miskov](https://dribbble.com/shots/2274792-Blog-Category-Selection)
-- [ ] Multi languages support.
