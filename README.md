@@ -17,7 +17,7 @@ See a [demo](http://renyuanz.github.io/leonids/) hosted on GitHub.
 ```
 cd blog
 gem install --user-install bundler jekyll
-jekyll server
+bundle exec jekyll server
 ```
 
 Check out your awesome blog at `http://localhost:4000` and Cheers!

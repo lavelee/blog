@@ -3,6 +3,7 @@
   background-color: $white;
   position: absolute;
   top: 400px;
+  body.post & { top: 0px; } // post에서는 얼굴 가림
   z-index: 233;
   width: 100%;
   padding: 20px 20px 0;
@@ -30,7 +31,7 @@
 
 // Post Section
 section.post {
-	margin-bottom: 80px;
+	margin-bottom: 70px;
 }
 
 // Back home button
