@@ -90,3 +90,21 @@ return {
 };
 
 ```
+
+---
+
+### 함수의 조건을 동적으로 바꿀때
+
+- factory 를 만들어 쓸 수 있다.
+- 커링할 경우 커링된 함수를 만드는 과정이 복잡하면 의미가 없다. 
+- 인자 두개 넘어가거나 콜백함수를 꽂으면 점점 못생겨지니 파라미터 하나로만 쓰자. 
+
+```js
+
+return data
+.filter(_lessThan(10))
+.filter(_lessThan(limit))
+.map(_removeText('kkk'))
+.filter(_removeText('kkk', remover))
+
+```
