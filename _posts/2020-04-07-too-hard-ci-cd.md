@@ -2,7 +2,7 @@
 layout: post
 title: 빌드과정 파악해보고 느낀 점
 excerpt: CI/CD를 아주 쬐끔 맛보았는데 불맛이었다
-categories: [diary]
+categories: [diary] 
 comments: true
 ---
 
